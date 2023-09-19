@@ -1,0 +1,17 @@
+name: Node CI/CO
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Załadowanie repo
+        uses: actions/checkout@v3
+      - name: Podłączenie node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: "16.x"
+      - name: Instalacja dependencji
+        run: npm run test

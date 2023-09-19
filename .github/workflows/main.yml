@@ -1,4 +1,4 @@
-name: Node CI/CO
+name: Node CI/CD
 on:
   push:
     branches: [main]
@@ -15,5 +15,5 @@ jobs:
           node-version: "16.x"
       - name: Instalacja dependencji
         run: npm install
-      - name: uruchomienie testów
+      - name: Uruchomienie testów
         run: npm run test
